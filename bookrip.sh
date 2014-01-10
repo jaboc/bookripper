@@ -72,7 +72,7 @@ echo "Wrapping mp3 with mp3wrap"
 mp3wrap result.mp3 $(ls -1 *.mp3 | sort)
 
 echo "Running the result throught lame to correct the meta data"
-nice -n $niceness lame -V 9 result_mp3wrap.mp3 result.mp3
+nice -n $niceness lame -V 9 result_MP3WRAP.mp3 result.mp3
 
 echo "Setting ID3 tags"
 id3 -1 -2  -n 1 -l "$title" -t "$title" -a "$author" -g "audiobook" -c "$comment" result.mp3 
